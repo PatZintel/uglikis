@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "13348993849",
+    "project_id": "uglikis",
+    "storage_bucket": "uglikis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13348993849:android:7fe2dbc5fb287860e186e8",
+        "android_client_info": {
+          "package_name": "tc.mds.uglikis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "13348993849-atn920dmlm3lcqbupfk3h6nldb00gbte.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrQnfVJD0esG9FObKDDa0VOkHyMhVL_ys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "13348993849-atn920dmlm3lcqbupfk3h6nldb00gbte.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
