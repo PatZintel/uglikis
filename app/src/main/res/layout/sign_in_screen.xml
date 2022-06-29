@@ -1,0 +1,187 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/horizontalScrollView4"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+	<!--
+    /*
+     *	This content is generated from the API File Info.
+     *	(Alt+Shift+Ctrl+I).
+     *
+     *	@desc
+     *	@file 		sign_in_screen
+     *	@date 		1656266114860
+     *	@title 		Main Game
+     *	@author
+     *	@keywords
+     *	@generator 	Export Kit v1.3.figma
+     *
+     */
+    -->
+
+
+	<View
+		android:id="@+id/_bg__sign_in_screen"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@drawable/_bg__sign_in_screen_shape"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.0" />
+
+	<EditText
+		android:id="@+id/username2"
+		android:layout_width="250dp"
+		android:layout_height="wrap_content"
+		android:autofillHints="@string/prompt_email"
+		android:hint="@string/prompt_email"
+		android:inputType="textEmailAddress"
+		android:minHeight="48dp"
+		android:selectAllOnFocus="true"
+		android:textColor="@color/black"
+		android:textColorHint="#757575"
+		app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.496"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.817" />
+
+	<TextView
+		android:id="@+id/sign_in"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:fontFamily="Poppins"
+		android:gravity="center"
+		android:text="@string/sign_in_string"
+		android:textColor="@color/sign_in_color"
+		android:textSize="36sp"
+		app:layout_constraintBottom_toTopOf="@+id/line_13"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@+id/already_have_an_account_"
+		app:layout_constraintVertical_bias="0.151" />
+
+	<TextView
+		android:id="@+id/already_have_an_account_"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:fontFamily="Poppins"
+		android:gravity="center"
+		android:text="@string/already_have_an_account__string"
+		android:textColor="@color/sign_in_color"
+		android:textSize="15sp"
+		app:layout_constraintBottom_toTopOf="@+id/line_13"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@+id/_bg__sign_in_screen"
+		app:layout_constraintVertical_bias="0.079" />
+
+
+	<Button
+		android:id="@+id/button_ek1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="304dp"
+		android:background="@drawable/round_shape_button"
+		android:fontFamily="Poppins"
+		android:text="@string/button_login_text"
+		android:textColor="@color/_bg__sign_in_screen_color"
+		android:textSize="16sp"
+		android:textStyle="bold"
+		app:layout_constraintBottom_toTopOf="@+id/or"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.0" />
+
+	<com.google.android.gms.common.SignInButton
+		android:id="@+id/sign_in_button"
+		android:layout_width="255dp"
+		android:layout_height="56dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/button_ek5" />
+
+	<Button
+		android:id="@+id/button_ek5"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:fontFamily="Poppins"
+		android:background="@drawable/round_shape_button"
+		android:text="@string/button_ek5_string"
+		android:textColor="@color/_bg__sign_in_screen_color"
+		android:textSize="16sp"
+		android:textStyle="bold"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/sign_up"
+		app:layout_constraintVertical_bias="0.277" />
+
+	<View
+		android:id="@+id/line_13"
+		android:layout_width="0dp"
+		android:layout_height="3dp"
+		android:layout_marginStart="20dp"
+		android:layout_marginEnd="20dp"
+		android:background="@drawable/line_13_shape"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="@+id/_bg__sign_in_screen"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+		android:id="@+id/or"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:fontFamily="Poppins"
+		android:gravity="center"
+		android:text="@string/or_string"
+		android:textColor="@color/sign_in_color"
+		android:textSize="15sp"
+		app:layout_constraintBottom_toTopOf="@+id/sign_up"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/line_13" />
+
+	<TextView
+		android:id="@+id/sign_up"
+		android:layout_width="300dp"
+		android:layout_height="wrap_content"
+		android:fontFamily="Poppins"
+		android:gravity="center"
+		android:text="@string/sign_up_string"
+		android:textColor="@color/sign_in_color"
+		android:textSize="36sp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.498"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@+id/_bg__sign_in_screen"
+		app:layout_constraintVertical_bias="0.66" />
+
+	<EditText
+		android:id="@+id/editTextTextPassword"
+		android:layout_width="250dp"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="52dp"
+		android:autofillHints=""
+		android:ems="10"
+		android:hint="@string/password_string"
+		android:inputType="textPassword"
+		android:minHeight="48dp"
+		android:textColorHint="#757575"
+		android:textColor="@color/black"
+		app:layout_constraintBottom_toTopOf="@+id/button_ek1"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.496"
+		app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

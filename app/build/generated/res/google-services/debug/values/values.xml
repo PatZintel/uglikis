@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">13348993849-atn920dmlm3lcqbupfk3h6nldb00gbte.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">13348993849</string>
+    <string name="google_api_key" translatable="false">AIzaSyCrQnfVJD0esG9FObKDDa0VOkHyMhVL_ys</string>
+    <string name="google_app_id" translatable="false">1:13348993849:android:7fe2dbc5fb287860e186e8</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCrQnfVJD0esG9FObKDDa0VOkHyMhVL_ys</string>
+    <string name="google_storage_bucket" translatable="false">uglikis.appspot.com</string>
+    <string name="project_id" translatable="false">uglikis</string>
+</resources>

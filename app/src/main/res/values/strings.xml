@@ -3,4 +3,41 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="welcome_to_string">Welcome To</string>
+    <string name="uglikis_string">UGLIKIS</string>
+    <string name="button_ek1_string">Get Started</string>
+
+    <!-- specific_activity strings -->
+
+    <string name="tum_string">TUM</string>
+    <string name="mds_string">MDS</string>
+    <string name="arcisstra_e_21__80333_string">Karolinenplatz 4, 80333</string>
+    <string name="mobility_data_space_center_string">Mobility Data Space Center</string>
+    <string name="approx__7_min_walk_string">approx. 7 min walk</string>
+    <string name="large_title_string">Bike trip</string>
+    <string name="next_milestone___48g_co2_string">Next Milestone           48g CO2</string>
+
+    <!-- sign_in_screen strings -->
+
+    <string name="ek_img_content">ExportKit Image</string>
+    <string name="sign_in_string">Sign In</string>
+    <string name="already_have_an_account__string">Already have an account?</string>
+    <string name="password_string">Password</string>
+    <string name="username_string">Username</string>
+    <string name="button_ek3_string">Sign up with Google</string>
+    <string name="button_ek5_string">Sign up with Email</string>
+    <string name="button_login_text">Log In</string>
+    <string name="or_string">or</string>
+    <string name="sign_up_string">Sign Up</string>
+    <string name="title_activity_login_android_template">LoginActivityAndroidTemplate</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="Play_game_button_descstring">Play the game</string>
 </resources>

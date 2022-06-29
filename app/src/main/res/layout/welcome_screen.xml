@@ -1,0 +1,98 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/horizontalScrollView"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+	<!--
+    /*
+     *	This content is generated from the API File Info.
+     *	(Alt+Shift+Ctrl+I).
+     *
+     *	@desc
+     *	@file 		welcome_screen
+     *	@date 		1656253075259
+     *	@title 		Main Game
+     *	@author
+     *	@keywords
+     *	@generator 	Export Kit v1.3.figma
+     *
+     */
+    -->
+
+
+	<View
+		android:id="@+id/_bg__welcome_screen"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@drawable/_bg__welcome_screen_shape"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.0" />
+
+	<ImageView
+		android:id="@+id/achievements___accomplishment__target__flag__woman__mountain_climber__promotion__goal_ek1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:contentDescription="achievements___accomplishment__target__flag__woman__mountain_climber__promotion__goal_ek1"
+		android:src="@drawable/achievements___accomplishment__target__flag__woman__mountain_climber__promotion__goal_ek1"
+		app:layout_constraintBottom_toBottomOf="@+id/_bg__welcome_screen"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.492"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@+id/_bg__welcome_screen"
+		app:layout_constraintVertical_bias="0.204" />
+
+	<TextView
+		android:id="@+id/welcome_to"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:fontFamily="Poppins"
+		android:text="@string/welcome_to_string"
+		android:textColor="@color/welcome_to_color"
+		android:textSize="20sp"
+		app:layout_constraintBottom_toTopOf="@+id/uglikis"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.501"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/achievements___accomplishment__target__flag__woman__mountain_climber__promotion__goal_ek1"
+		app:layout_constraintVertical_bias="0.455" />
+
+	<TextView
+		android:id="@+id/uglikis"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:fontFamily="Poppins"
+		android:text="@string/uglikis_string"
+		android:textColor="@color/welcome_to_color"
+		android:textSize="40sp"
+		app:layout_constraintBottom_toTopOf="@+id/button_ek1"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.501"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/achievements___accomplishment__target__flag__woman__mountain_climber__promotion__goal_ek1"
+		app:layout_constraintVertical_bias="0.505" />
+
+	<Button
+		android:id="@+id/button_ek1"
+		android:layout_width="160dp"
+		android:layout_height="wrap_content"
+		android:background="@drawable/round_shape_button"
+		android:backgroundTintMode="src_in"
+		android:fontFamily="Poppins"
+		android:text="@string/button_ek1_string"
+		android:textAlignment="center"
+		android:textColor="@color/_bg__welcome_screen_color"
+		android:textSize="16sp"
+		android:textStyle="bold"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/achievements___accomplishment__target__flag__woman__mountain_climber__promotion__goal_ek1"
+		app:layout_constraintVertical_bias="0.64" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
