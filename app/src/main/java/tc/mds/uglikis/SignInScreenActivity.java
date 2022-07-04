@@ -25,11 +25,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.ImageView;
 
 import com.google.android.gms.common.SignInButton;
 
-	public class sign_in_screen_activity extends Activity {
+	public class SignInScreenActivity extends Activity {
 
 	
 	private View _bg__sign_in_screen;
@@ -71,7 +70,7 @@ import com.google.android.gms.common.SignInButton;
 		button_ek1.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Intent nextScreen = new Intent(getApplicationContext(), specific_activity_activity.class);
+				Intent nextScreen = new Intent(getApplicationContext(), ActivityDetailViewActivity.class);
 				startActivity(nextScreen);
 			}
 		});

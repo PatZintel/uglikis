@@ -26,7 +26,7 @@ import android.content.Intent;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class specific_activity_activity extends Activity {
+public class ActivityDetailViewActivity extends Activity {
 
 	
 	private View __bg__specific_activity;

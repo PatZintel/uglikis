@@ -1,20 +1,35 @@
 package tc.mds.uglikis;
 
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
+import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.LinkedList;
+import java.util.List;
+
+import tc.mds.uglikis.adapter.LeaderboardListAdapter;
 import tc.mds.uglikis.databinding.ActivityMainBinding;
+import tc.mds.uglikis.fragments.LeaderboardFragment;
+import tc.mds.uglikis.model.Profile;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnItemSelectedListener{
 
     private ActivityMainBinding binding;
+    BottomNavigationView bottomNavigationView;
+    LeaderboardFragment leaderboardFragment = new LeaderboardFragment();
+    private TextView coinAmount;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,13 +37,41 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        coinAmount = (TextView) findViewById(R.id.coin_amount);
+        coinAmount.setText("420 UCs");
 
-        BottomNavigationView navView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setOnItemSelectedListener(this);
+        bottomNavigationView.setSelectedItemId(R.id.activities);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
+                R.id.navigation_activities, R.id.navigation_education, R.id.navigation_leaderboard, R.id.navigation_profile)
                 .build();
+    }
+
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.activities:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, leaderboardFragment).commit();
+                return true;
+
+            case R.id.education:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, leaderboardFragment).commit();
+                return true;
+
+            case R.id.leaderboard:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, leaderboardFragment).commit();
+                return true;
+
+            case R.id.profile:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, leaderboardFragment).commit();
+                return true;
+        }
+        return false;
     }
 
 }

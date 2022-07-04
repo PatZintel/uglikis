@@ -9,8 +9,11 @@
         android:title="Education"
         android:icon="@drawable/school_hat_icon"/>
     <item
+        android:id="@+id/dummy"
+        android:title=" "/>
+    <item
         android:id="@+id/leaderboard"
-        android:icon="@drawable/vector_ek55"
+        android:icon="@drawable/trophy"
         android:title="Leaderboard" />
     <item
         android:id="@+id/profile"

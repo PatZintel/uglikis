@@ -15,32 +15,29 @@
         tools:targetApi="31">
 
         <activity
-            android:name=".welcome_screen_activity"
+            android:name=".WelcomeScreenActivity"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".sign_in_screen_activity"
+            android:name=".SignInScreenActivity"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".specific_activity_activity"
+            android:name=".ActivityDetailViewActivity"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.ALTERNATIVE" />
             </intent-filter>
         </activity>
@@ -50,7 +47,6 @@
         android:label="@string/title_activity_main">
         <intent-filter>
             <action android:name="android.intent.action.VIEW" />
-
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>

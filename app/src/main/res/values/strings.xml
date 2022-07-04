@@ -40,4 +40,8 @@
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="Play_game_button_descstring">Play the game</string>
+    <string name="ug_leaderboard_string">Leaderboard</string>
+    <string name="sample_tag">\@sample_tag</string>
+    <string name="sample_name">Sample Name</string>
+    <string name="sample_points">1337</string>
 </resources>

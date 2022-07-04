@@ -2,7 +2,6 @@
 <!-- ellipse_5 from your XD file. -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
 	android:shape="oval" >
-	<stroke android:color="#6540f5" android:width="1dp" />
-	<solid android:color="@color/ellipse_5_color" />
+	<solid android:color="@color/first_leader_points_color" />
 </shape>
 

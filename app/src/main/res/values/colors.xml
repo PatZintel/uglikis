@@ -24,4 +24,12 @@
     <color name="sign_in_color">#000000</color>
     <color name="rectangle_5239_color">#F7F8F8</color>
     <color name="password_color">#ACA3A5</color>
+
+    <color name="second_leader_tag_color">#7B6F72</color>
+    <color name="third_leader_points_color">#00D95F</color>
+    <color name="second_leader_points_color">#009BD6</color>
+    <color name="first_leader_points_color">#FFAA00</color>
+    <color name="_bg__leaderboard_color">#FFFFFF</color>
+    <color name="light_green">#A0D195</color>
+
 </resources>

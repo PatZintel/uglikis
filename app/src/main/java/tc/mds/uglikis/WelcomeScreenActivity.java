@@ -27,7 +27,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class welcome_screen_activity extends Activity {
+public class WelcomeScreenActivity extends Activity {
 
 	
 	private View _bg__welcome_screen;
@@ -53,7 +53,7 @@ public class welcome_screen_activity extends Activity {
 		button_ek1.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Intent nextScreen = new Intent(getApplicationContext(), sign_in_screen_activity.class);
+				Intent nextScreen = new Intent(getApplicationContext(), SignInScreenActivity.class);
 				startActivity(nextScreen);
 			}
 		});
