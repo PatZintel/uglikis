@@ -1,7 +1,7 @@
 package tc.mds.uglikis.model;
 
 public class Profile {
-    private int id;
+    private int ProfileId;
     private String username;
     private String tag;
     private int points;

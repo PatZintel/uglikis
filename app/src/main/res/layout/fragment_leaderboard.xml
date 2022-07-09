@@ -226,7 +226,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="Inter"
-                android:text="@string/tum_string"
+                android:text="@string/sample_points"
                 android:textColor="@color/first_leader_points_color"
                 android:textSize="15sp"
                 android:textStyle="bold"

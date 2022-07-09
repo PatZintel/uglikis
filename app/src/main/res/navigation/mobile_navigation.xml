@@ -40,7 +40,7 @@
         android:id="@+id/navigation_education"
         android:name="tc.mds.uglikis.fragments.LeaderboardFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_leaderboard" > <!--fragment_education-->
+        tools:layout="@layout/fragment_education" > <!--fragment_education-->
         <action
             android:id="@+id/action_navigation_education_to_navigation_profile"
             app:destination="@id/navigation_profile" />

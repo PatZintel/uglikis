@@ -27,7 +27,22 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class WelcomeScreenActivity extends Activity {
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.firebase.ui.auth.*;
+
+import com.firebase.ui.auth.KickoffActivity;
+import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class WelcomeScreenActivity extends AppCompatActivity {
 
 	
 	private View _bg__welcome_screen;
@@ -36,6 +51,46 @@ public class WelcomeScreenActivity extends Activity {
 	private TextView uglikis;
 	private Button button_ek1;
 
+/*
+	public void createSignInIntent() {
+		// [START auth_fui_create_intent]
+		// Choose authentication providers
+		List<AuthUI.IdpConfig> providers = Arrays.asList(
+				new AuthUI.IdpConfig.EmailBuilder().build(),
+				new AuthUI.IdpConfig.GoogleBuilder().build());
+
+		// Create and launch sign-in intent
+		Intent signInIntent = AuthUI.getInstance()
+				.createSignInIntentBuilder()
+				.setAvailableProviders(providers)
+				.build();
+		signInLauncher.launch(signInIntent);
+		// [END auth_fui_create_intent]
+	}
+
+		private final ActivityResultLauncher<Intent> signInLauncher = registerForActivityResult(
+				new FirebaseAuthUIActivityResultContract(),
+				(ActivityResultCallback<FirebaseAuthUIAuthenticationResult>) result -> onSignInResult(result));
+
+
+		// [START auth_fui_result]
+		private void onSignInResult(FirebaseAuthUIAuthenticationResult result) {
+			IdpResponse response = result.getIdpResponse();
+			if (result.getResultCode() == RESULT_OK) {
+				// Successfully signed in
+				FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+				Intent nextScreen = new Intent(getApplicationContext(), KickoffActivity.class);
+				startActivity(nextScreen);
+				// ...
+			} else {
+				// Sign in failed. If response is null the user canceled the
+				// sign-in flow using the back button. Otherwise check
+				// response.getError().getErrorCode() and handle the error.
+				// ...
+			}
+		}
+		// [END auth_fui_result]
+*/
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 
@@ -53,8 +108,9 @@ public class WelcomeScreenActivity extends Activity {
 		button_ek1.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Intent nextScreen = new Intent(getApplicationContext(), SignInScreenActivity.class);
+				Intent nextScreen = new Intent(getApplicationContext(), MainActivity.class); //
 				startActivity(nextScreen);
+				//createSignInIntent();
 			}
 		});
 	

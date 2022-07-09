@@ -22,13 +22,12 @@ public class LeaderboardListAdapter extends RecyclerView.Adapter<LeaderboardList
 
         private final TextView leaderboardListItemTag;
         private final TextView leaderboardListItemPoints;
+        private final TextView leaderboardListItemStanding;
+        private final ImageView leaderboardListItemPicture;
 
         public TextView getLeaderboardListItemStanding() {
             return leaderboardListItemStanding;
         }
-
-        private final TextView leaderboardListItemStanding;
-        private final ImageView leaderboardListItemPicture;
 
 
         public TextView getLeaderboardListItemPoints() {
@@ -62,7 +61,6 @@ public class LeaderboardListAdapter extends RecyclerView.Adapter<LeaderboardList
     @Override
     public LeaderboardListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.leaderboard_list_item, parent, false);
-
         return new ViewHolder(view);
     }
 

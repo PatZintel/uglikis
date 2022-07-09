@@ -18,6 +18,8 @@ import java.util.List;
 
 import tc.mds.uglikis.adapter.LeaderboardListAdapter;
 import tc.mds.uglikis.databinding.ActivityMainBinding;
+import tc.mds.uglikis.fragments.ActivityFragment;
+import tc.mds.uglikis.fragments.EducationFragment;
 import tc.mds.uglikis.fragments.LeaderboardFragment;
 import tc.mds.uglikis.model.Profile;
 
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     private ActivityMainBinding binding;
     BottomNavigationView bottomNavigationView;
     LeaderboardFragment leaderboardFragment = new LeaderboardFragment();
+    ActivityFragment activityFragment = new ActivityFragment();
+    EducationFragment educationFragment = new EducationFragment();
     private TextView coinAmount;
 
 
@@ -56,11 +60,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         switch (item.getItemId()) {
             case R.id.activities:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, leaderboardFragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, activityFragment).commit();
                 return true;
 
             case R.id.education:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, leaderboardFragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, educationFragment).commit();
                 return true;
 
             case R.id.leaderboard:
