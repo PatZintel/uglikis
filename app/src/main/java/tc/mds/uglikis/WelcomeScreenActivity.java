@@ -51,7 +51,7 @@ public class WelcomeScreenActivity extends AppCompatActivity {
 	private TextView uglikis;
 	private Button button_ek1;
 
-/*
+
 	public void createSignInIntent() {
 		// [START auth_fui_create_intent]
 		// Choose authentication providers
@@ -79,7 +79,7 @@ public class WelcomeScreenActivity extends AppCompatActivity {
 			if (result.getResultCode() == RESULT_OK) {
 				// Successfully signed in
 				FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-				Intent nextScreen = new Intent(getApplicationContext(), KickoffActivity.class);
+				Intent nextScreen = new Intent(getApplicationContext(), MainActivity.class); //
 				startActivity(nextScreen);
 				// ...
 			} else {
@@ -90,7 +90,7 @@ public class WelcomeScreenActivity extends AppCompatActivity {
 			}
 		}
 		// [END auth_fui_result]
-*/
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 
@@ -108,9 +108,7 @@ public class WelcomeScreenActivity extends AppCompatActivity {
 		button_ek1.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Intent nextScreen = new Intent(getApplicationContext(), MainActivity.class); //
-				startActivity(nextScreen);
-				//createSignInIntent();
+				createSignInIntent();
 			}
 		});
 	

@@ -3,10 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable-nodpi/_bg__leaderboard_shape.xml" value="0.3675" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable-nodpi/ellipse_1_shape.xml" value="0.196" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable-nodpi/line_1_shape.xml" value="0.196" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable-nodpi/rectangle_3_shape.xml" value="0.196" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable-nodpi/rectangle_5_shape.xml" value="0.196" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable-nodpi/rectangle_6_shape.xml" value="0.196" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable-nodpi/rectangle_7_shape.xml" value="0.196" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable-nodpi/rectangle_8_shape.xml" value="0.196" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/account_circle-48px.xml" value="0.273" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/account_circle.xml" value="0.273" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/activities_background_forest.xml" value="0.3675" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/activity_screen_white_bg_rounded.xml" value="0.3665" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/divider_leaderboard_list.xml" value="0.3675" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/account_circle_stroked.xml" value="0.3675" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/activity_list_item_background.xml" value="0.3665" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/divider_leaderboard_list.xml" value="0.3675" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/account_circle_stroked.xml" value="0.3675" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/activity_list_item_background.xml" value="0.3665" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/divider_leaderboard_list.xml" value="0.3675" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/google_sign_in_button.xml" value="0.273" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/home-48px.xml" value="0.273" />
@@ -15,19 +29,45 @@
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/ic_launcher_background.xml" value="0.196" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.196" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/light_green_stroke_rounded.xml" value="0.3675" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/ic_sports_esports_fill0_wght400_grad0_opsz48.xml" value="0.3675" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/light_green_stroke_rounded.xml" value="0.3675" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/profile_pics_shape.xml" value="0.195" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/profile_pics_shape_second.xml" value="0.3675" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/profile_pics_shape_third.xml" value="0.3675" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/ic_sports_esports_fill0_wght400_grad0_opsz48.xml" value="0.3675" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/light_green_stroke_rounded.xml" value="0.3675" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/profile_pics_shape.xml" value="0.195" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/profile_pics_shape_second.xml" value="0.3675" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/profile_pics_shape_third.xml" value="0.3675" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/round_shape_button.xml" value="0.196" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/drawable/school_hat_icon.xml" value="0.273" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout-land/fui_auth_method_picker_layout.xml" value="0.1591710758377425" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/activities_list_item.xml" value="0.3532608695652174" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/activity_login_android_template.xml" value="0.328804347826087" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/fragment_activities.xml" value="0.18802083333333333" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/activity_main.xml" value="0.26197916666666665" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/articles_list_item.xml" value="0.30085470085470084" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/fragment_activities_home_screen.xml" value="0.3532608695652174" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/fragment_activities.xml" value="0.18802083333333333" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/fragment_dashboard.xml" value="0.18802083333333333" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/fragment_education.xml" value="0.18802083333333333" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/fragment_education.xml" value="0.3532608695652174" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/fragment_education.xml" value="0.18802083333333333" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/fragment_home.xml" value="0.18802083333333333" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/fragment_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/fragment_item_list.xml" value="0.35260416666666666" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/fragment_leaderboard.xml" value="0.33" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/fragment_leaderboard.xml" value="0.33" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/fragment_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/fragment_item_list.xml" value="0.35260416666666666" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/fragment_leaderboard.xml" value="0.33" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/fragment_notifications.xml" value="0.18802083333333333" />
-        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/sign_in_screen.xml" value="0.5" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/fragment_profile.xml" value="0.33061594202898553" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/leaderboard.xml" value="0.33061594202898553" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/recycler_view_item.xml" value="0.3532608695652174" />
+        <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/sign_in_screen.xml" value="0.25" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/specific_activity.xml" value="0.25" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/layout/welcome_screen.xml" value="0.18802083333333333" />
         <entry key="..\:/_Patrick/Uni/TC/Uglikis/app/src/main/res/menu/bottom_nav_menu.xml" value="0.36666666666666664" />
