@@ -8,10 +8,12 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import android.content.Intent;
 
 import java.util.List;
 
 import tc.mds.uglikis.R;
+import tc.mds.uglikis.SpecificActivitiesActivity;
 import tc.mds.uglikis.model.Activity;
 
 /**
@@ -21,6 +23,7 @@ import tc.mds.uglikis.model.Activity;
 public class ActivityRecyclerViewAdapter extends RecyclerView.Adapter<ActivityRecyclerViewAdapter.ViewHolder> {
 
     private List<Activity> mValues;
+
 
     public ActivityRecyclerViewAdapter(List<Activity> items) {
         mValues = items;
@@ -39,6 +42,21 @@ public class ActivityRecyclerViewAdapter extends RecyclerView.Adapter<ActivityRe
         holder.getTitle().setText(holder.getItem().getName());
         holder.getDescription1().setText(holder.getItem().getDescription());
         holder.getDescription2().setText(holder.getItem().getRewardRate());
+
+        // Add onclick listener to open SpecificActivityFragment
+
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v){
+
+                android.util.Log.d("black","onclick inside recyclerAdapter");
+                // use MainActivity.java logic with beginTransaction for fragment
+                Intent nextScreen = new Intent(v.getContext(), SpecificActivitiesActivity.class);
+                v.getContext().startActivity(nextScreen);
+            }
+        });
+
     }
 
     @Override

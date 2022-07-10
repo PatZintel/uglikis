@@ -21,6 +21,7 @@ import tc.mds.uglikis.databinding.ActivityMainBinding;
 import tc.mds.uglikis.fragments.ActivityFragment;
 import tc.mds.uglikis.fragments.EducationFragment;
 import tc.mds.uglikis.fragments.LeaderboardFragment;
+import tc.mds.uglikis.fragments.UserProfileFragment;
 import tc.mds.uglikis.model.Profile;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnItemSelectedListener{
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     LeaderboardFragment leaderboardFragment = new LeaderboardFragment();
     ActivityFragment activityFragment = new ActivityFragment();
     EducationFragment educationFragment = new EducationFragment();
+    UserProfileFragment profileFragment = new UserProfileFragment();
     private TextView coinAmount;
 
 
@@ -72,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 return true;
 
             case R.id.profile:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, leaderboardFragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, profileFragment).commit();
                 return true;
         }
         return false;
