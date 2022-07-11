@@ -16,9 +16,9 @@ import tc.mds.uglikis.model.Profile;
 
 public class ProfileStatementsListAdapter extends RecyclerView.Adapter<ProfileStatementsListAdapter.ViewHolder> {
 
-    //    private List<Profile> profileStatements;
-    private List<String> statementList;
-    private List<String> tagList;
+    private List<Profile> profilestatement_list_item;
+    private String[] statementList;
+    private String[] tagList;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -50,27 +50,27 @@ public class ProfileStatementsListAdapter extends RecyclerView.Adapter<ProfileSt
 
     }
 
-    public ProfileStatementsListAdapter(List<String> statementList, List<String> tagList) {
+    public ProfileStatementsListAdapter(String[] statementList, String[] tagList) {
         this.statementList = statementList;
         this.tagList = tagList;
     }
 
     @NonNull
     @Override
-    public ProfileStatementsListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.profilestatement_list_item, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ProfileStatementsListAdapter.ViewHolder holder, int position) {
-        holder.getProfileStatementListItemStatement().setText(statementList.get(position));
-        holder.getProfileStatementListItemTag().setText(tagList.get(position));
+        holder.getProfileStatementListItemStatement().setText(statementList[position]);
+        holder.getProfileStatementListItemTag().setText(tagList[position]);
 //        holder.getProfileStatementListItemStanding().setText(String.valueOf(position+4));
     }
 
     @Override
     public int getItemCount() {
-        return statementList.size();
+        return statementList.length;
     }
 }

@@ -50,14 +50,13 @@
         private RecyclerView profileStatements_list;
 
 
-
         public UserProfileFragment() {
 
         }
 
 
         @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
 
             profileStatements_list = (RecyclerView) rootView.findViewById(R.id.profileStatements_list);
@@ -65,11 +64,15 @@
             //dummy Data for now
 
             // add stuff
-            List<String> tags = new LinkedList<>();
-            List<String> statements = new LinkedList<>();;
+//            List<String> tags = new LinkedList<>();
+//            List<String> statements = new LinkedList<>();
+//            tags.add("You currently have 420 UC points");
+//            statements.add("Pro");
 
-            tags.add("You currently have 420 UC points");
-            statements.add("Pro");
+            String[] statements = {"You currently have 420 UC points", "You're great at bike and EV use!"};
+            String[] tags = {"Pro!",""};
+
+
 
            /* while(keys.hasNext()) {
                 String key = keys.next();
@@ -92,7 +95,7 @@
             scrollPosition = ((LinearLayoutManager) profileStatements_list.getLayoutManager()).findFirstCompletelyVisibleItemPosition();
             profileStatements_list.scrollToPosition(scrollPosition);
             profileStatements_list.setAdapter(new ProfileStatementsListAdapter(statements, tags));
-            DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(profileStatements_list.getContext(),((LinearLayoutManager) profileStatements_list.getLayoutManager()).getOrientation());
+            DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(profileStatements_list.getContext(), ((LinearLayoutManager) profileStatements_list.getLayoutManager()).getOrientation());
             dividerItemDecoration.setDrawable(ContextCompat.getDrawable(getContext(), R.drawable.divider_leaderboard_list));
             profileStatements_list.addItemDecoration(dividerItemDecoration);
 
