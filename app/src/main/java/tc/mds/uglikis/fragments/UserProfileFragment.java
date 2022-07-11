@@ -32,28 +32,22 @@
     import androidx.recyclerview.widget.LinearLayoutManager;
     import androidx.recyclerview.widget.RecyclerView;
 
-    import org.w3c.dom.Text;
+    import org.json.JSONArray;
+    import org.json.JSONObject;
 
     import java.util.LinkedList;
     import java.util.List;
 
     import tc.mds.uglikis.R;
     import tc.mds.uglikis.adapter.LeaderboardListAdapter;
+    import tc.mds.uglikis.adapter.ProfileStatementsListAdapter;
     import tc.mds.uglikis.model.Profile;
 
     public class UserProfileFragment extends Fragment {
 
         //Leaderboard ViewItems
-        private ImageView leaderboardFirstProfilePic;
-        private ImageView leaderboardSecondProfilePic;
-        private ImageView leaderboardThirdProfilePic;
-        private TextView leaderboardFirstTag;
-        private TextView leaderboardSecondTag;
-        private TextView leaderboardThirdTag;
-        private TextView leaderboardFirstPoints;
-        private TextView leaderboardSecondPoints;
-        private TextView leaderboardThirdPoints;
-        private RecyclerView leaderboardList;
+        private ImageView profilePic;
+        private RecyclerView profileStatements_list;
 
 
 
@@ -64,38 +58,43 @@
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-            View rootView = inflater.inflate(R.layout.fragment_leaderboard, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
 
-            leaderboardFirstProfilePic = (ImageView) rootView.findViewById(R.id.first_profile_pic);
-            leaderboardSecondProfilePic = (ImageView) rootView.findViewById(R.id.second_profile_pic);
-            leaderboardThirdProfilePic = (ImageView) rootView.findViewById(R.id.third_profile_pic);
-            leaderboardFirstTag = (TextView) rootView.findViewById(R.id.first_leader_tag);
-            leaderboardSecondTag = (TextView) rootView.findViewById(R.id.second_leader_tag);
-            leaderboardThirdTag = (TextView) rootView.findViewById(R.id.third_leader_tag);
-            leaderboardFirstPoints = (TextView) rootView.findViewById(R.id.first_leader_points);
-            leaderboardSecondPoints = (TextView) rootView.findViewById(R.id.second_leader_points);
-            leaderboardThirdPoints = (TextView) rootView.findViewById(R.id.third_leader_points);
-            leaderboardList = (RecyclerView) rootView.findViewById(R.id.leaderboard_list);
+            profileStatements_list = (RecyclerView) rootView.findViewById(R.id.profileStatements_list);
 
             //dummy Data for now
+
+            // add stuff
+            List<String> tags = new LinkedList<>();
+            List<String> statements = new LinkedList<>();;
+
+            tags.add("You currently have 420 UC points");
+            statements.add("Pro");
+
+           /* while(keys.hasNext()) {
+                String key = keys.next();
+                if (jsonObj.get(key) instanceof JSONObject) {
+                    // do something with jsonObject here
+                }
+            }
             List<Profile> profiles = new LinkedList<Profile>();
             for (int i = 0; i < 10; i++){
                 Profile profile = new Profile("some username", "@example_tag");
                 profile.setPoints(1200 - i);
                 profiles.add(profile);
             }
+*/
 
 
-
-            leaderboardList.setLayoutManager(new LinearLayoutManager(getActivity()));
+            profileStatements_list.setLayoutManager(new LinearLayoutManager(getActivity()));
 
             int scrollPosition = 0;
-            scrollPosition = ((LinearLayoutManager) leaderboardList.getLayoutManager()).findFirstCompletelyVisibleItemPosition();
-            leaderboardList.scrollToPosition(scrollPosition);
-            leaderboardList.setAdapter(new LeaderboardListAdapter(profiles));
-            DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(leaderboardList.getContext(),((LinearLayoutManager) leaderboardList.getLayoutManager()).getOrientation());
+            scrollPosition = ((LinearLayoutManager) profileStatements_list.getLayoutManager()).findFirstCompletelyVisibleItemPosition();
+            profileStatements_list.scrollToPosition(scrollPosition);
+            profileStatements_list.setAdapter(new ProfileStatementsListAdapter(statements, tags));
+            DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(profileStatements_list.getContext(),((LinearLayoutManager) profileStatements_list.getLayoutManager()).getOrientation());
             dividerItemDecoration.setDrawable(ContextCompat.getDrawable(getContext(), R.drawable.divider_leaderboard_list));
-            leaderboardList.addItemDecoration(dividerItemDecoration);
+            profileStatements_list.addItemDecoration(dividerItemDecoration);
 
             return rootView;
         }
