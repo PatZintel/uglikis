@@ -1,10 +1,15 @@
 package tc.mds.uglikis.model;
 
 public class Profile {
-    private int ProfileId;
+
+    private String authUserId;
     private String username;
     private String tag;
     private int points;
+
+    public Profile (){
+
+    }
 
     public Profile(String username, String tag){
         points = 0;
@@ -35,4 +40,18 @@ public class Profile {
     public void setPoints(int points) {
         this.points = points;
     }
+
+    public String getAuthUserId() {
+        return authUserId;
+    }
+
+    public void setAuthUserId(String authUserId) {
+        this.authUserId = authUserId;
+    }
+
+    public int addPoints(int add){
+        points += add;
+        return points;
+    }
+
 }
