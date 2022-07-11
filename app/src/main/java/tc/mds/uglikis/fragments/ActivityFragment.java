@@ -48,12 +48,12 @@ public class ActivityFragment extends Fragment {
         nutritionActivityList = view.findViewById(R.id.nutrition_activities_list);
 
         List<Activity> activities = new LinkedList<Activity>();
-        for (int i = 0; i < 4; i++){
-            activities.add(new Activity(i*3, ActivityType.Mobility, "Riding the bike "+i,
+        for (int i = 0; i < 4; i++) {
+            activities.add(new Activity(i * 3, ActivityType.Mobility, "Riding the bike " + i,
                     "Save CO2 by riding the bike instead of the car", 5));
-            activities.add(new Activity(i*3+1, ActivityType.Waste, "Recycle properly "+i,
+            activities.add(new Activity(i * 3 + 1, ActivityType.Waste, "Recycle properly " + i,
                     "Save CO2 by properly recycling your waste so it won't get burnt", 1));
-            activities.add(new Activity(i*3+2, ActivityType.Nutrition, "Eating meatless "+i,
+            activities.add(new Activity(i * 3 + 2, ActivityType.Nutrition, "Eating meatless " + i,
                     "Save CO2 by avoiding meat in your food", 2));
         }
 

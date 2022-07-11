@@ -9,9 +9,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+
 import java.util.List;
 
 import tc.mds.uglikis.R;
+import tc.mds.uglikis.SpecificActivitiesActivity;
 import tc.mds.uglikis.model.Activity;
 
 /**
@@ -39,6 +42,29 @@ public class ActivityRecyclerViewAdapter extends RecyclerView.Adapter<ActivityRe
         holder.getTitle().setText(holder.getItem().getName());
         holder.getDescription1().setText(holder.getItem().getDescription());
         holder.getDescription2().setText(holder.getItem().getRewardRate());
+
+        // set ongoingWidget to Green if ongoing
+        if (holder.getItem().getOngoing() == true) {
+            // set widget
+            holder.getOngoingWidget().setText("Ongoing");
+        } else holder.getOngoingWidget().setText("");
+
+
+
+        // Add onclick listener to open SpecificActivityFragment
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                android.util.Log.d("black", "onclick inside recyclerAdapter");
+                // use MainActivity.java logic with beginTransaction for fragment
+                Intent nextScreen = new Intent(v.getContext(), SpecificActivitiesActivity.class);
+                v.getContext().startActivity(nextScreen);
+            }
+        });
+
     }
 
     @Override
@@ -51,6 +77,7 @@ public class ActivityRecyclerViewAdapter extends RecyclerView.Adapter<ActivityRe
         private final TextView description1;
         private final TextView description2;
         private final ImageView splashart;
+        private final TextView ongoingWidget;
 
         private Activity mItem;
 
@@ -60,6 +87,7 @@ public class ActivityRecyclerViewAdapter extends RecyclerView.Adapter<ActivityRe
             this.title = view.findViewById(R.id.article_list_item_title);
             this.description1 = view.findViewById(R.id.article_list_item_description);
             this.description2 = view.findViewById(R.id.activity_list_item_desc2);
+            this.ongoingWidget = view.findViewById(R.id.activity_list_item_ongoingW);
             this.splashart = view.findViewById(R.id.article_list_item_splashart);
         }
 
@@ -74,6 +102,8 @@ public class ActivityRecyclerViewAdapter extends RecyclerView.Adapter<ActivityRe
         public TextView getTitle() {
             return title;
         }
+
+        public TextView getOngoingWidget() { return this.ongoingWidget; }
 
         public TextView getDescription1() {
             return description1;

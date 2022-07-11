@@ -22,18 +22,18 @@ import tc.mds.uglikis.databinding.ActivityMainBinding;
 import tc.mds.uglikis.fragments.ActivityFragment;
 import tc.mds.uglikis.fragments.EducationFragment;
 import tc.mds.uglikis.fragments.LeaderboardFragment;
+import tc.mds.uglikis.fragments.UserProfileFragment;
 import tc.mds.uglikis.model.Profile;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnItemSelectedListener{
 
     private ActivityMainBinding binding;
-    private BottomNavigationView bottomNavigationView;
-    private LeaderboardFragment leaderboardFragment = new LeaderboardFragment();
-    private ActivityFragment activityFragment = new ActivityFragment();
-    private EducationFragment educationFragment = new EducationFragment();
+    BottomNavigationView bottomNavigationView;
+    LeaderboardFragment leaderboardFragment = new LeaderboardFragment();
+    ActivityFragment activityFragment = new ActivityFragment();
+    EducationFragment educationFragment = new EducationFragment();
+    UserProfileFragment profileFragment = new UserProfileFragment();
     private TextView coinAmount;
-
-
 
 
 
@@ -41,8 +41,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -77,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 return true;
 
             case R.id.profile:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, leaderboardFragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, profileFragment).commit();
                 return true;
         }
         return false;

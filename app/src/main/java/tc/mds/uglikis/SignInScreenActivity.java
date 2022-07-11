@@ -28,6 +28,8 @@ import android.widget.TextView;
 
 import com.google.android.gms.common.SignInButton;
 
+import tc.mds.uglikis.fragments.ActivityFragment;
+
 	public class SignInScreenActivity extends Activity {
 
 	
@@ -70,7 +72,7 @@ import com.google.android.gms.common.SignInButton;
 		button_ek1.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Intent nextScreen = new Intent(getApplicationContext(), ActivityDetailViewActivity.class);
+				Intent nextScreen = new Intent(getApplicationContext(), ActivityFragment.class);
 				startActivity(nextScreen);
 			}
 		});
