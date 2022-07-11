@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.database.FirebaseDatabase;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,11 +27,13 @@ import tc.mds.uglikis.model.Profile;
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnItemSelectedListener{
 
     private ActivityMainBinding binding;
-    BottomNavigationView bottomNavigationView;
-    LeaderboardFragment leaderboardFragment = new LeaderboardFragment();
-    ActivityFragment activityFragment = new ActivityFragment();
-    EducationFragment educationFragment = new EducationFragment();
+    private BottomNavigationView bottomNavigationView;
+    private LeaderboardFragment leaderboardFragment = new LeaderboardFragment();
+    private ActivityFragment activityFragment = new ActivityFragment();
+    private EducationFragment educationFragment = new EducationFragment();
     private TextView coinAmount;
+
+
 
 
 
@@ -38,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
