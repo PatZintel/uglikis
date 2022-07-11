@@ -7,6 +7,7 @@ public class Activity {
     private String name;
     private String description;
     private int rewardRate;
+    private boolean ongoing;
 
     public Activity(int id, ActivityType type, String name, String description, int rewardRate) {
         this.id = id;
@@ -14,6 +15,7 @@ public class Activity {
         this.name = name;
         this.description = description;
         this.rewardRate = rewardRate;
+        this.ongoing = false;
 
     }
 
@@ -43,6 +45,13 @@ public class Activity {
 
     public String getDescription() {
         return description;
+    }
+
+    public void setOngoing(boolean newState) {
+        this.ongoing = newState;
+    }
+    public boolean getOngoing() {
+        return this.ongoing;
     }
 
     public void setDescription(String description) {
