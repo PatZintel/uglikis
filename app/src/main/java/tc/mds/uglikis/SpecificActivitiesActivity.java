@@ -17,29 +17,28 @@ package tc.mds.uglikis;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.material.textfield.TextInputEditText;
+
+import tc.mds.uglikis.model.ActivityType;
+
 public class SpecificActivitiesActivity extends Activity {
 
+    private MainActivity mainActivity;
 
-    private View __bg__specific_activity;
-    private ImageView image_10;
-    private ImageView image_13;
-    private TextView tum;
-    private TextView mds;
-    private TextView arcisstra_e_21__80333;
-    private ImageView image_15;
-    private TextView mobility_data_space_center;
-    private TextView approx__7_min_walk;
-    private ImageView rectangle_ek1;
-    private TextView large_title;
-    private ImageView vector_1;
-    private ImageView back_arrow_specific;
-    private ImageView bg_destination_specific_map;
-    private TextView next_milestone___48g_co2;
+    private ImageView backButton;
+    private TextView activityTitle;
+    private TextInputEditText parameterInput;
+    private TextView resultText;
+    private TextView unitText;
+    private Button submitButton;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -53,31 +52,75 @@ public class SpecificActivitiesActivity extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.specific_activity);
+        backButton = findViewById(R.id.back_arrow_specific);
+        activityTitle = findViewById(R.id.large_title);
+        parameterInput = findViewById(R.id.parameter_input_text);
+        resultText = findViewById(R.id.result_text);
+        unitText = findViewById(R.id.unit_text);
+        submitButton = findViewById(R.id.submit_button);
+        submitButton.setClickable(false);
+
+        activityTitle.setText(getIntent().getCharSequenceExtra("title"));
+        int type = getIntent().getIntExtra("type", -1);
 
 
-        __bg__specific_activity = (View) findViewById(R.id.__bg__specific_activity);
-        image_10 = (ImageView) findViewById(R.id.image_10);
-        image_13 = (ImageView) findViewById(R.id.image_13);
-        tum = (TextView) findViewById(R.id.tum);
-        mds = (TextView) findViewById(R.id.mds);
-        arcisstra_e_21__80333 = (TextView) findViewById(R.id.arcisstra_e_21__80333);
-        image_15 = (ImageView) findViewById(R.id.image_15);
-        mobility_data_space_center = (TextView) findViewById(R.id.mobility_data_space_center);
-        approx__7_min_walk = (TextView) findViewById(R.id.approx__7_min_walk);
-        rectangle_ek1 = (ImageView) findViewById(R.id.rectangle_ek1);
-        large_title = (TextView) findViewById(R.id.large_title);
-        vector_1 = (ImageView) findViewById(R.id.vector_1);
-        back_arrow_specific = (ImageView) findViewById(R.id.back_arrow_specific);
-        bg_destination_specific_map = (ImageView) findViewById(R.id.bg_destination_specific_map);
-        next_milestone___48g_co2 = (TextView) findViewById(R.id.next_milestone___48g_co2);
+        switch(type){
+            case 0:
+                unitText.setText("Kilos");
+                break;
+            case 1:
+                unitText.setText("Kms");
+                break;
+            case 2:
+                unitText.setText("meals");
+                break;
+        }
+        int rewardRate = getIntent().getIntExtra("rewardRate", 0);
+        parameterInput.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-        //custom code goes here
-        __bg__specific_activity.setOnClickListener(new View.OnClickListener() {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.toString().length() > 0){
+                    resultText.setText("You will earn " + (Integer.parseInt(s.toString()) * rewardRate) + " UCs from this activity.");
+                    submitButton.setClickable(true);
+                }
+                else{
+                    submitButton.setClickable(false);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent returnIntent = new Intent();
+                int reward = Integer.parseInt(String.valueOf(parameterInput.getText())) * rewardRate;
+                MainActivity.coins += reward;
+                KnowledgeBase.addPointsToProfile(reward);
+                MainActivity.redrawOnce = true;
+                finish();
+                /*
+                Intent nextScreen = new Intent(v.getContext(), MainActivity.class);
+                int reward = Integer.parseInt(String.valueOf(parameterInput.getText())) * rewardRate;
+                nextScreen.putExtra("reward", reward);
+                startActivity(nextScreen);*/
+            }
+        });
+        backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d("black", "onclick run in specAct fragment");
-                Intent nextScreen = new Intent(view.getContext(), MainActivity.class);
-                startActivity(nextScreen);
+                Intent returnIntent = new Intent();
+                setResult(Activity.RESULT_CANCELED, returnIntent);
+                finish();
             }
         });
 

@@ -11,11 +11,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 
+import java.io.Serializable;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import tc.mds.uglikis.R;
 import tc.mds.uglikis.SpecificActivitiesActivity;
 import tc.mds.uglikis.model.Activity;
+import tc.mds.uglikis.model.ActivityType;
 
 /**
  * {@link RecyclerView.Adapter} that can display a {@link Activity}.
@@ -24,9 +27,11 @@ import tc.mds.uglikis.model.Activity;
 public class ActivityRecyclerViewAdapter extends RecyclerView.Adapter<ActivityRecyclerViewAdapter.ViewHolder> {
 
     private List<Activity> mValues;
+    private ActivityType activityType;
 
-    public ActivityRecyclerViewAdapter(List<Activity> items) {
-        mValues = items;
+    public ActivityRecyclerViewAdapter(List<Activity> items, ActivityType type) {
+        mValues = items.stream().filter(x -> x.getType().equals(type)).collect(Collectors.toList());
+        activityType = type;
     }
 
     @Override
@@ -41,15 +46,24 @@ public class ActivityRecyclerViewAdapter extends RecyclerView.Adapter<ActivityRe
         holder.setItem(mValues.get(position));
         holder.getTitle().setText(holder.getItem().getName());
         holder.getDescription1().setText(holder.getItem().getDescription());
-        holder.getDescription2().setText(holder.getItem().getRewardRate());
+        holder.getDescription2().setText(holder.getItem().rewardRateString());
+        switch (holder.getItem().getType()){
+            case Nutrition:
+                holder.splashart.setImageResource(R.drawable.food__shopping___groceries__grocery__organic__shop__store__fruit__vegetable__bread);
+                break;
+            case Mobility:
+                holder.splashart.setImageResource(R.drawable.ecology__transportation___electricity__car__vehicle__transport__automobile__eco_friendly__electric_ek1);
+                break;
+            case Waste:
+                holder.splashart.setImageResource(R.drawable.delete__ecology___trash__bin__garbage__remove__recycle__recycling_ek1);
+                break;
+        }
 
         // set ongoingWidget to Green if ongoing
         if (holder.getItem().getOngoing() == true) {
             // set widget
             holder.getOngoingWidget().setText("Ongoing");
         } else holder.getOngoingWidget().setText("");
-
-
 
         // Add onclick listener to open SpecificActivityFragment
 
@@ -60,7 +74,23 @@ public class ActivityRecyclerViewAdapter extends RecyclerView.Adapter<ActivityRe
 
                 android.util.Log.d("black", "onclick inside recyclerAdapter");
                 // use MainActivity.java logic with beginTransaction for fragment
+                //Intent nextScreen = new Intent(v.getContext(), SpecificActivitiesActivity.class);
                 Intent nextScreen = new Intent(v.getContext(), SpecificActivitiesActivity.class);
+                nextScreen.putExtra("rewardRate", holder.getItem().getRewardRate());
+                nextScreen.putExtra("title", holder.getItem().getName());
+                int aType = 0;
+                switch(holder.getItem().getType()){
+                    case Waste:
+                        aType = 0;
+                        break;
+                    case Mobility:
+                        aType = 1;
+                        break;
+                    case Nutrition:
+                        aType = 2;
+                        break;
+                }
+                nextScreen.putExtra("activityType", aType);
                 v.getContext().startActivity(nextScreen);
             }
         });

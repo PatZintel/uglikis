@@ -5,7 +5,7 @@ public class Profile {
     private String authUserId;
     private String username;
     private String tag;
-    private int points;
+    public int points;
 
     public Profile (){
 

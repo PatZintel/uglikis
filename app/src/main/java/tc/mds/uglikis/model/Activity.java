@@ -9,6 +9,10 @@ public class Activity {
     private int rewardRate;
     private boolean ongoing;
 
+    public Activity(){
+
+    }
+
     public Activity(int id, ActivityType type, String name, String description, int rewardRate) {
         this.id = id;
         this.type = type;
@@ -58,14 +62,18 @@ public class Activity {
         this.description = description;
     }
 
-    public String getRewardRate() {
+    public int getRewardRate(){
+        return rewardRate;
+    }
+
+    public String rewardRateString() {
         String unitRate = "";
         switch (type) {
             case Mobility:
                 unitRate = "UCs/km";
                 break;
             case Waste:
-                unitRate = "UCs/item";
+                unitRate = "UCs/kilo";
                 break;
             case Nutrition:
                 unitRate = "UCs/meal";

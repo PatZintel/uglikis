@@ -2,8 +2,6 @@ package tc.mds.uglikis.fragments;
 
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,12 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.ListIterator;
-import java.util.Locale;
 import java.util.stream.Collectors;
 
 import tc.mds.uglikis.R;
@@ -32,7 +26,7 @@ import tc.mds.uglikis.model.Article;
  * Use the {@link EducationFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class EducationFragment extends Fragment {
+public class EducationFragment extends Fragment implements LoadedFragment {
 
     private RecyclerView articleRecyclerView;
     private TextView searchText;
@@ -55,6 +49,10 @@ public class EducationFragment extends Fragment {
         return fragment;
     }
 
+
+    public void notifyDatasetChanged(){
+        adapter.notifyDataSetChanged();
+    }
 
 
     @Override

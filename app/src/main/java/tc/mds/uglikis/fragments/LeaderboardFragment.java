@@ -32,8 +32,6 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
-
 import java.util.LinkedList;
 import java.util.List;
 
@@ -41,7 +39,7 @@ import tc.mds.uglikis.R;
 import tc.mds.uglikis.adapter.LeaderboardListAdapter;
 import tc.mds.uglikis.model.Profile;
 
-	public class LeaderboardFragment extends Fragment {
+	public class LeaderboardFragment extends Fragment implements LoadedFragment {
 
 		//Leaderboard ViewItems
 		private ImageView leaderboardFirstProfilePic;
@@ -54,11 +52,16 @@ import tc.mds.uglikis.model.Profile;
 		private TextView leaderboardSecondPoints;
 		private TextView leaderboardThirdPoints;
 		private RecyclerView leaderboardList;
+		private LeaderboardListAdapter leaderboardAdapter;
 
 
 
 		public LeaderboardFragment() {
 
+		}
+
+		public void notifyDatasetChanged(){
+			leaderboardAdapter.notifyDataSetChanged();
 		}
 
 
@@ -92,7 +95,8 @@ import tc.mds.uglikis.model.Profile;
 		int scrollPosition = 0;
 		scrollPosition = ((LinearLayoutManager) leaderboardList.getLayoutManager()).findFirstCompletelyVisibleItemPosition();
 		leaderboardList.scrollToPosition(scrollPosition);
-		leaderboardList.setAdapter(new LeaderboardListAdapter(profiles));
+		leaderboardAdapter = new LeaderboardListAdapter(profiles);
+		leaderboardList.setAdapter(leaderboardAdapter);
 		DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(leaderboardList.getContext(),((LinearLayoutManager) leaderboardList.getLayoutManager()).getOrientation());
 		dividerItemDecoration.setDrawable(ContextCompat.getDrawable(getContext(), R.drawable.divider_leaderboard_list));
 		leaderboardList.addItemDecoration(dividerItemDecoration);
